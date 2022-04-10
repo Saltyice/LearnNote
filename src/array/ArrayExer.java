@@ -1,7 +1,11 @@
 package array;
 
 public class ArrayExer {
+    //随便加个注释
+    //123再来随便来点
+    ///1234567890
     public static void main(String[] args) {
+        System.out.println("???");
         int [] arr = new int[]{2,3,5,7,11,13,17,19};
         for (int i=0;i<arr.length;i++){
             System.out.print(arr[i]+"\t");
