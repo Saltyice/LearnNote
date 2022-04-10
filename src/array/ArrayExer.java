@@ -6,6 +6,7 @@ public class ArrayExer {
     ///1234567890
     public static void main(String[] args) {
         System.out.println("???");
+        System.out.println("?");
         int [] arr = new int[]{2,3,5,7,11,13,17,19};
         for (int i=0;i<arr.length;i++){
             System.out.print(arr[i]+"\t");
