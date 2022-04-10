@@ -4,6 +4,7 @@ import my.test.Order;
 
 public class SubOrder extends Order {
 //123123
+    //1231231231
     public void method(){
         orderProtected =1;
         orderProtected=1;
