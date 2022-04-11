@@ -18,7 +18,7 @@ public class Circle  {
 
 
 class PassObject{
-    public void PrintAreas(Circle c,int time){
+    public void PrintAreas(Circle c, int time){
          for (double i=1;i<=time;i++){
              c.radius = i;
              System.out.println(i+"\t\t"+ c.findArea());

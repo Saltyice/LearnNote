@@ -6,6 +6,7 @@ package object;
 public class exe1 {
     public static void main(String[] args) {
         System.out.println(fibonacci(10));
+
     }
 
     public static double exe1(double n) {
