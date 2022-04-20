@@ -1,6 +1,5 @@
 package object;
 
-import com.sun.jdi.FloatType;
 import org.junit.jupiter.api.Test;
 
 /**

@@ -1,8 +1,5 @@
 package object;
 
-import java.lang.reflect.MalformedParametersException;
-import java.util.Objects;
-
 public class InstanceTest {
     public static void main(String[] args) {
         HumanKind kind = new male();
