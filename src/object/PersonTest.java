@@ -1,5 +1,7 @@
 package object;
 
+import java.util.Objects;
+
 /**
  * 一.设计类 其实就是设计类的成员
  *
@@ -18,7 +20,55 @@ package object;
  * 四 对象的内存解析
  *
  */
-public class PersonTest {
+public class PersonTest implements Comparable {
+    private String name;
+    private int age;
+
+    @Override
+    public String toString() {
+        return "PersonTest{" +
+                "name='" + name + '\'' +
+                ", age=" + age +
+                '}';
+    }
+
+    public PersonTest(String name, int age) {
+        this.name = name;
+        this.age = age;
+    }
+
+    public String getName() {
+        return name;
+    }
+
+    public void setName(String name) {
+        this.name = name;
+    }
+
+    public int getAge() {
+        return age;
+    }
+
+    public void setAge(int age) {
+        this.age = age;
+    }
+
+    public PersonTest() {
+    }
+
+    @Override
+    public boolean equals(Object o) {
+        if (this == o) return true;
+        if (!(o instanceof PersonTest)) return false;
+        PersonTest that = (PersonTest) o;
+        return getAge() == that.getAge() && getName().equals(that.getName());
+    }
+
+    @Override
+    public int hashCode() {
+        return Objects.hash(getName(), getAge());
+    }
+
     public static void main(String[] args) {
         Person p = new Person();
         p.name ="pp";
@@ -42,6 +92,22 @@ public class PersonTest {
         System.out.println(ppp.age);
 
 
+    }
+
+    @Override
+    public int compareTo(Object o) {
+        if (o instanceof PersonTest)  {
+            PersonTest personTest = (PersonTest) o;
+            if (this.age>personTest.age){
+                return 1;
+            } else if (this.age< personTest.age) {
+                return -1;
+            } else {
+                return 0;
+            }
+        } else{
+            throw new RuntimeException("123");
+        }
     }
 }
 
