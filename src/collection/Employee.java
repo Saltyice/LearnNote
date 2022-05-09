@@ -5,6 +5,12 @@ import java.util.Objects;
 public class Employee implements  Comparable {
     private String name;
     private int age;
+
+    public Employee(String name, int age) {
+        this.name = name;
+        this.age = age;
+    }
+
     private MyDate birthDay;
 
     public Employee(String name, int age, MyDate birthDay) {
@@ -14,6 +20,14 @@ public class Employee implements  Comparable {
     }
 
     public Employee() {
+    }
+
+    public Employee(int age) {
+        this.age = age;
+    }
+
+    public Employee(Integer integer, String s) {
+
     }
 
     public String getName() {

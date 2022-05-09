@@ -88,6 +88,23 @@ public class StringTest {
         System.out.println(new String(byteps, "gbk" )); //设置为正确字符集就不会报错了
 
     }
+    //JDK11 新方法
+    public void test4() {
+        //判断是否是空格
+        System.out.println("\t \t \n ".isBlank());
+        //去除首尾空格
+        System.out.println("--------"+"\t abc\t \n ".strip());
+        //去除头部空格
+        System.out.println("--------"+"\t abc\t \n ".stripLeading());
+        //去除尾部恐怖
+        System.out.println("--------"+"\t abc\t \n ".stripTrailing());
+        //去除空格
+        System.out.println("--------"+"\t abc\t \n ".trim());
+        //重复
+        System.out.println("1111".repeat(10));
+        //统计行数
+        System.out.println("1241\n2412\n4".lines().count());
+    }
 
 }
 
